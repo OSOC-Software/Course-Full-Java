@@ -1,0 +1,4 @@
+co\com\jd\sga\domain\Persona.class
+co\com\jd\sga\cliente\ClientePersonaServices.class
+co\com\jd\sga\servicio\PersonaServiceRemote.class
+co\com\jd\sga\servicio\PersonaServicioImpl.class

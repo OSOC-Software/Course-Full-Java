@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio Formulario</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="recursos/estilos.css"/>
+        <script type="text/javascript" src="recursos/Funciones.js"></script>
+    </head>
+    <body>
+        <h1>Manejo de Formularios HTML</h1>
+        <form name="form1" action="/ManejoFormulariosHTML/Servlet" method="POST" onsubmit="return validarForma(this)">
+            <input type="hidden" name="oculto" value="valorOculto" />
+            <table width="200" id="enfasis-columna">
+                <caption>
+                    Formulario Registro de Datos
+                </caption>
+                <tr>
+                    <td class="columna">Usuario: *</td>
+                    <td >
+                        <input class="default" type="text" name="usuario" value="Escribir usuario" onfocus="this.select()" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">
+                        Password: *
+                    </td>
+                    <td>
+                        <input class="default" type="password" name="password" onfocus="this.select()" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">
+                        Tecnologías: *
+                    </td>
+                    <td>
+                        Java <input type="checkbox" name="tecnologia" value="java" />
+                        &nbsp;
+                        .NET <input type="checkbox" name="tecnologia" value=".net" />
+                        &nbsp;
+                        PHP <input type="checkbox" name="tecnologia" value="php" />
+                        &nbsp; 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">
+                        Género: *
+                    </td>
+                    <td>
+                        M <input type="checkbox" name="genero" value="m" />
+                        &nbsp;
+                        F <input type="checkbox" name="genero" value="f" />
+                        &nbsp;
+                    </td>
+                </tr> 
+                <tr>
+                    <td class="columna">
+                        Ocupación: *
+                    </td>
+                    <td>
+                        <select name="ocupacion" class="default">
+                            <option value=""> Seleccionar... </option>
+                            <option value="1"> Profesor </option>                            
+                            <option value="2"> Ingeniero </option>
+                            <option value="3"> Jubilado </option>
+                            <option value="4"> Otro </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">
+                        Música:
+                    </td>
+                    <td>
+                        <select name="musica" class="default" multiple>
+                            <option value=""> Seleccionar... </option>
+                            <option value="1"> Rock </option>                            
+                            <option value="2"> Pop </option>
+                            <option value="3"> Salsa </option>
+                            <option value="4"> Otro </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">
+                        Comentarios: 
+                    </td>
+                    <td>
+                        <textarea name="comentarios" cols="30" rows="2" class="default" onfocus="this.select()">
+                        </textarea>
+                    </td>
+                </tr>
+                <tr style="text-align: center;">
+                    <td>
+                        <input type="reset" value="Limpiar" class="default" />
+                    </td>
+                    <td>
+                        <input type="submit" value="Enviar" class="default" />
+                    </td>
+            </table>
+
+        </form>
+    </body>
+</html>

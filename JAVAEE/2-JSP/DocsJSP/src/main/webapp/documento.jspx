@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Document   : documento
+    Created on : 25 sept. 2022, 19:58:39
+    Author     : ASUS
+-->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+
+    <!--Declaraciones -->
+    <jsp:declaration>
+        private int contadorVisitas = 1;
+    </jsp:declaration>
+    <html>
+        <body>
+            <h1>Dentro del Documento JSPX</h1>
+            <!-- Salida de texto -->
+            <jsp:text>Saludos desde un documento JSPX</jsp:text>
+                <br/>
+                <!-- expresion -->
+            <jsp:expression>2 * 3</jsp:expression>
+                <br/>
+                <!-- Scriptlet -->
+            <jsp:scriptlet>
+                String nombreApp = request.getContextPath();
+            </jsp:scriptlet>
+            <br/>
+            Nombre App: 
+            <jsp:expression>nombreApp</jsp:expression>
+                <br/>
+                Contador = <jsp:expression>this.contadorVisitas++</jsp:expression>
+            </body>
+        </html>
+
+</jsp:root>

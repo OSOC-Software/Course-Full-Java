@@ -1,0 +1,10 @@
+domain\PersonaDTO.class
+datos\UsuarioDAO.class
+test\TestMySQLJDBC.class
+datos\Conexion.class
+datos\PersonaDAO.class
+test\ManejoUsuarios.class
+test\TestManejoPersonas.class
+domain\UsuarioDTO.class
+datos\Persona_DAO_JDBC.class
+datos\Usuario_DAO_JDBC.class
