@@ -22,7 +22,7 @@ public class Conexion {
 
     public static DataSource getDataSource() {
         if (dataSource == null) {
-            BasicDataSource dataSource = new BasicDataSource();
+            dataSource = new BasicDataSource();
             dataSource.setUrl(JBDC_URL);
             dataSource.setUsername(JDBC_USER);
             dataSource.setPassword(JDBC_PASSWORD);

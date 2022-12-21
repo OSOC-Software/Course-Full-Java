@@ -49,7 +49,7 @@ public class ServletControlador extends HttpServlet {
 
     private void accionDefault(HttpServletRequest rq, HttpServletResponse rs) throws ServletException, IOException {
         List<Cliente> clientes = new ClienteDaoJDBC().listar();
-        System.out.println(clientes);
+        System.out.println("clientes: " + clientes);
         HttpSession session = rq.getSession();
         session.setAttribute("clientes", clientes);
         session.setAttribute("totalClientes", clientes.size());
@@ -94,7 +94,7 @@ public class ServletControlador extends HttpServlet {
     }
 
     private void modificarCliente(HttpServletRequest rq, HttpServletResponse rs) throws ServletException, IOException {
-        int idCliente = Integer.parseInt("idCliente");
+        int idCliente = Integer.parseInt(rq.getParameter("idCliente"));
         String nombre = rq.getParameter("nombre");
         String apellido = rq.getParameter("apellido");
         String telefono = rq.getParameter("telefono");
@@ -109,17 +109,14 @@ public class ServletControlador extends HttpServlet {
         System.out.println("registrosModificados: " + registrosModificados);
         this.accionDefault(rq, rs);
     }
-    
+
     private void eliminarCliente(HttpServletRequest rq, HttpServletResponse rs) throws ServletException, IOException {
-        int idCliente = Integer.parseInt("idCliente");
-        
+        int idCliente = Integer.parseInt(rq.getParameter("idCliente"));
         Cliente cliente = new Cliente(idCliente);
         int registrosModificados = new ClienteDaoJDBC().eliminar(cliente);
         System.out.println("registrosModificados: " + registrosModificados);
         this.accionDefault(rq, rs);
     }
-    
-    
 
     private double calcularsaldoTotal(List<Cliente> clientes) {
         double saldoTotal = 0;

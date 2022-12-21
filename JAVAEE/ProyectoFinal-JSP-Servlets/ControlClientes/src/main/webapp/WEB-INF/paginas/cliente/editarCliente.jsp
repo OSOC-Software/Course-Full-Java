@@ -13,7 +13,7 @@
         <!-- Cabecero -->
         <jsp:include page="/WEB-INF/paginas/comunes/cabecero.jsp"/>
 
-        <form action="${pageContext.request.contextPath}/ServletControlador?accion=modificar&idCliente=${idCliente}" method="POST" class="was-validated">
+        <form action="${pageContext.request.contextPath}/ServletControlador?accion=modificar&idCliente=${cliente.idCliente}" method="POST" class="was-validated">
 
             <!-- Botones Edicion -->
             <jsp:include page="/WEB-INF/paginas/comunes/botonesNavEditar.jsp"/>
