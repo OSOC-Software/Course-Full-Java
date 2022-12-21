@@ -6,6 +6,7 @@
         <title>JSP Lee valores del JavaBean</title>
     </head>
     <body>
+         <h1>JSP Lee valores del JavaBean</h1>
         <jsp:useBean id="rectangulo" class="beans.Rectangulo" scope="session"/>
         <br>
         Valor base: <jsp:getProperty name="rectangulo" property="base" />

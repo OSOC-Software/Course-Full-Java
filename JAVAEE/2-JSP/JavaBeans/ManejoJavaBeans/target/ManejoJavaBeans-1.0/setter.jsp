@@ -5,6 +5,7 @@
         <title>JSP Modifica a Java Bean</title>
     </head>
     <body>
+        <h1>JSP Modifica a Java Bean</h1>
 
         <jsp:useBean id="rectangulo" class="beans.Rectangulo" scope="session" />
         Modificamos los atributos 
@@ -16,7 +17,11 @@
 
         <jsp:setProperty name="rectangulo" property="base" value="<%=baseValor%>" />
         <jsp:setProperty name="rectangulo" property="altura" value="<%=alturaValor%>" />
-
-
+        <br>
+        Nuevo valor Base: <%=baseValor%>
+        <br>
+        Nuevo valor altura: <%=alturaValor%>
+        <br>
+        <a href="index.jsp">Ir al Inicio</a>
     </body>
 </html>

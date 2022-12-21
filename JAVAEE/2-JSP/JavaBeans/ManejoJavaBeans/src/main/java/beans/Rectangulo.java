@@ -14,7 +14,7 @@ public class Rectangulo {
     private int base;
     private int altura;
 
-    Rectangulo() {
+    public Rectangulo() {
     }
 
     public int getAltura() {
